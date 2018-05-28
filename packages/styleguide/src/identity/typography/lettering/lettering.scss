@@ -1,0 +1,18 @@
+@import '../../colors', '../../typography';
+
+.lettering {
+  $font-size: map-get($type-scale, body);
+  @include typeface();
+  font-size: $font-size;
+  font-weight: $font-weight-light;
+  line-height: map-get($line-height, body);
+  color: $black;
+}
+
+.lettering--secondary {
+  color: $silver;
+}
+
+.lettering--accent {
+  color: $purple;
+}

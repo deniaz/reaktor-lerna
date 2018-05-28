@@ -1,0 +1,37 @@
+{
+  "name": "styleguide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "jest -c ./config/jest/config.js",
+    "start": "start-storybook -p 9001 -c ./config/storybook"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.6",
+    "@storybook/addon-knobs": "^3.4.6",
+    "@storybook/addon-options": "^3.4.6",
+    "@storybook/react": "^3.4.6",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.0.1",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.0.1",
+    "node-sass": "^4.9.0",
+    "postcss-flexbugs-fixes": "^3.3.1",
+    "postcss-loader": "^2.1.5",
+    "react-test-renderer": "^16.4.0",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  }
+}
