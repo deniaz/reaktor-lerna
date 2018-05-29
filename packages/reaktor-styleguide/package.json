@@ -2,11 +2,12 @@
   "name": "reaktor-styleguide",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/bundle.js",
   "private": true,
   "scripts": {
-    "test": "jest -c ./config/jest/config.js",
-    "start": "start-storybook -p 9001 -c ./config/storybook"
+    "start": "start-storybook -p 9001 -c ./config/storybook",
+    "build": "build-storybook -c ./config/storybook -o ./build",
+    "test": "jest -c ./config/jest/config.js"
   },
   "author": "",
   "license": "MIT",
@@ -25,10 +26,15 @@
     "postcss-flexbugs-fixes": "^3.3.1",
     "postcss-loader": "^2.1.5",
     "react-test-renderer": "^16.4.0",
+    "rimraf": "^2.6.2",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0"
   },
   "dependencies": {
+    "autoprefixer": "^8.5.1",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "mini-css-extract-plugin": "^0.4.0",
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
