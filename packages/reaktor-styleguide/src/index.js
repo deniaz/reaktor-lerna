@@ -1,16 +1,10 @@
-export * from './components/card';
+export * from './components';
 
-export * from './compositions/radio-group';
+export * from './compositions';
 
-export * from './elements/button';
-export * from './elements/checkbox';
-export * from './elements/icon';
-export * from './elements/input';
-export * from './elements/link';
-export * from './elements/radio';
-export * from './elements/select';
+export * from './elements';
 
-export * from './identity/typography';
-// Layout?
+export * from './identity';
+// // Layout?
 
-// Pages?
+// // Pages?

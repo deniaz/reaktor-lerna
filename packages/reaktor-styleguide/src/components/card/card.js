@@ -1,4 +1,4 @@
-import { arrayOf, element, oneOfType, string } from 'prop-types';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import { Title } from '../../identity/typography/title';
@@ -15,7 +15,7 @@ export const Card = ({ title, image = null, children }) => (
 );
 
 Card.propTypes = {
-  title: string.isRequired,
-  image: string,
-  children: oneOfType([element, arrayOf(element)]).isRequired,
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)]).isRequired,
 };

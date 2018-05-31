@@ -1,4 +1,4 @@
-import { arrayOf, bool, func, shape, string } from 'prop-types';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import { Radio } from '../../elements/radio';
@@ -11,14 +11,14 @@ export const RadioGroup = ({ label, options }) => (
   </div>
 );
 RadioGroup.propTypes = {
-  label: string.isRequired,
-  options: arrayOf(
-    shape({
-      label: string,
-      name: string.isRequired,
-      value: string.isRequired,
-      checked: bool,
-      onChange: func,
+  label: PropTypes.string.isRequired,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      name: PropTypes.string.isRequired,
+      value: PropTypes.string.isRequired,
+      checked: PropTypes.bool,
+      onChange: PropTypes.func,
     }),
   ).isRequired,
 };

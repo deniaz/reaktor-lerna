@@ -1,4 +1,4 @@
-import { arrayOf, bool, func, shape, string } from 'prop-types';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 export const Select = ({ label, name, value, options, multiple = false, onChange = () => {} }) => (
@@ -15,16 +15,16 @@ export const Select = ({ label, name, value, options, multiple = false, onChange
 );
 
 Select.propTypes = {
-  label: string,
-  name: string.isRequired,
-  value: string,
-  options: arrayOf(
-    shape({
-      disabled: bool,
-      label: string.isRequired,
-      selected: bool,
-      value: string,
+  label: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      disabled: PropTypes.bool,
+      label: PropTypes.string.isRequired,
+      selected: PropTypes.bool,
+      value: PropTypes.string,
     }),
   ).isRequired,
-  onChange: func,
+  onChange: PropTypes.func,
 };

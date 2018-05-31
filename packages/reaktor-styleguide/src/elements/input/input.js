@@ -1,4 +1,4 @@
-import { bool, func, string, oneOf } from 'prop-types';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 export const Input = ({ name, value = '', type = 'text', label = null, onChange = () => {} }) => (
@@ -9,9 +9,20 @@ export const Input = ({ name, value = '', type = 'text', label = null, onChange 
 );
 
 Input.propTypes = {
-  label: string,
-  type: oneOf(['color', 'date', 'datetime', 'datetime-local', 'email', 'number', 'text', 'password', 'search', 'tel']),
-  name: string.isRequired,
-  value: string.isRequired,
-  onChange: func,
+  label: PropTypes.string,
+  type: PropTypes.oneOf([
+    'color',
+    'date',
+    'datetime',
+    'datetime-local',
+    'email',
+    'number',
+    'text',
+    'password',
+    'search',
+    'tel',
+  ]),
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
 };

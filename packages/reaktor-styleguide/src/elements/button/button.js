@@ -1,5 +1,5 @@
-import { bool, func, string } from 'prop-types';
-import React, { cloneElement, createElement } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 import { className } from '../../utils/class-name';
 import styles from './button.scss';
@@ -36,10 +36,10 @@ export const Button = ({ label = null, href, primary = false, large = false, dis
 };
 
 Button.propTypes = {
-  label: string.isRequired,
-  primary: bool,
-  large: bool,
-  disabled: bool,
-  onClick: func,
-  href: string,
+  label: PropTypes.string.isRequired,
+  primary: PropTypes.bool,
+  large: PropTypes.bool,
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func,
+  href: PropTypes.string,
 };

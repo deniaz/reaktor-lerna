@@ -1,4 +1,4 @@
-import { bool, func, string } from 'prop-types';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import { Label } from '../../identity/typography/label';
@@ -23,9 +23,9 @@ export const Checkbox = ({ name, value, label = null, checked = false, onChange 
 );
 
 Checkbox.propTypes = {
-  label: string,
-  name: string.isRequired,
-  value: string.isRequired,
-  checked: bool,
-  onChange: func,
+  label: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  checked: PropTypes.bool,
+  onChange: PropTypes.func,
 };
